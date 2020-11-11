@@ -17,7 +17,7 @@ client.on('ready', () => {
   console.log('Nu kan ik beginnnen met vervelend doen...\n----------------')
 });
 client.on('message', msg => {
-	msg = msg.toLowerCase();
+	msg = msg.content.toLowerCase();
 	if (msg == maak_netjes(msg)) return;
 	else {
 		msg.delete()
