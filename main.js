@@ -16,12 +16,13 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   console.log('Nu kan ik beginnnen met vervelend doen...\n----------------')
 });
+
 client.on('message', msg => {
-	msg = msg.content.toLowerCase();
-	if (msg == maak_netjes(msg)) return;
+	m = msg.content.toLowerCase();
+	if (m == maak_netjes(m)) return;
 	else {
 		msg.delete()
-		msg.channel.send(`${msg.author.toString()} zei: ${maak_netjes(msg)}`)
+		msg.channel.send(`${msg.author.toString()} zei: ${maak_netjes(m)}`)
 	}
 });
 
